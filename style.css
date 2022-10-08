@@ -59,13 +59,41 @@ h3 {
 }
 
 .cyan-top-bar {
-  box-shadow: inset 0px 4px hsl(180, 62%, 55%);
+  background: 
+  linear-gradient(
+    0deg, 
+    white 97%, 
+    hsl(180, 62%, 55%) 3%
+  );
+}
+
+.red-top-bar {
+  background: 
+  linear-gradient(
+    0deg, 
+    white 97%, 
+    hsl(0, 78%, 62%) 3%
+  );
+}
+
+.orange-top-bar {
+  background: 
+  linear-gradient(
+    0deg, 
+    white 97%, 
+    hsl(34, 97%, 64%) 3%
+  );
+}
+
+.blue-top-bar {
+  background: 
+  linear-gradient(
+    0deg, 
+    white 97%, 
+    hsl(212, 86%, 64%) 3%
+  );
 }
 
 .card p {
   margin-top: 0.25rem;
-}
-
-.card-background {
-  background-color: white;
 }
