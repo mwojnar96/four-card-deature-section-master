@@ -1,8 +1,14 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 body {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 400;
   color: hsl(229, 6%, 66%);
@@ -15,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 0;
   margin: 0;
 }
@@ -27,8 +32,6 @@ body {
   color: hsl(234, 12%, 34%);
 }
 
-/* styling */
-
 h1 {
   font-weight: 200;
 }
@@ -37,63 +40,102 @@ h3 {
   margin: 0;
 }
 
+.icon {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
 /* mobile first design */
 
 .container {
+  box-sizing: border-box;
   margin-top: 4rem;
   padding-right: 2rem;
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .grid-layout-cards {
-  margin-top: 4rem;
+  justify-content: center;
+  margin-top: 2rem;
   display: grid;
-  gap: 1rem;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, 20rem);
+  gap: 2rem;
 }
 
 .card {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 8rem;
+  max-width: 20rem;
   padding: 2rem 1.5rem;
   text-align: left;
   border-radius: 1rem;
   overflow: hidden;
 }
 
+.card-shadow {
+  box-shadow: 0px 5px 25px -10px hsl(229deg 6% 66%);
+}
+
 .cyan-top-bar {
-  background: 
-  linear-gradient(
-    0deg, 
-    white 97%, 
-    hsl(180, 62%, 55%) 3%
-  );
+  background: linear-gradient(0deg, white 97%, hsl(180, 62%, 55%) 3%);
 }
 
 .red-top-bar {
-  background: 
-  linear-gradient(
-    0deg, 
-    white 97%, 
-    hsl(0, 78%, 62%) 3%
-  );
+  background: linear-gradient(0deg, white 97%, hsl(0, 78%, 62%) 3%);
 }
 
 .orange-top-bar {
-  background: 
-  linear-gradient(
-    0deg, 
-    white 97%, 
-    hsl(34, 97%, 64%) 3%
-  );
+  background: linear-gradient(0deg, white 97%, hsl(34, 97%, 64%) 3%);
 }
 
 .blue-top-bar {
-  background: 
-  linear-gradient(
-    0deg, 
-    white 97%, 
-    hsl(212, 86%, 64%) 3%
-  );
+  background: linear-gradient(0deg, white 97%, hsl(212, 86%, 64%) 3%);
 }
 
 .card p {
   margin-top: 0.25rem;
+}
+
+/* desktop design */
+@media screen and (min-width: 1440px) {
+  .grid-layout-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card4"
+      "card1 card3 card4";
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  header {
+    max-width: 30rem;
+  }
+
+  .card {
+    align-self: center;
+  }
+
+  .card1 {
+    grid-area: card1;
+  }
+
+  .card2 {
+    grid-area: card2;
+  }
+
+  .card3 {
+    grid-area: card3;
+  }
+
+  .card4 {
+    grid-area: card4;
+  }
 }
